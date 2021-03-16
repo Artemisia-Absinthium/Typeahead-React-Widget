@@ -74,7 +74,7 @@ class Typeahead extends Component {
         var cursorPos = this.state.cursorPos;
         var searchResult = this.state.searchResult;
 
-        if (cursorPos > -1 && cursorPos < searchResult.length - 1) {
+        if (cursorPos > -1 && cursorPos < searchResult.length) {
             var newValue = searchResult[cursorPos];
             this.ChangeSearch(MergeResult(newValue));
         }
