@@ -1,4 +1,4 @@
-# React Typeahead Widget
+# Typeahead React Widget
 
 A simple typeahead widget implementation in React.
 
