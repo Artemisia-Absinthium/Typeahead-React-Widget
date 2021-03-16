@@ -6,12 +6,29 @@ import fruits from "./Fruits"
 import { findMatches } from './Utils.js';
 
 class Typeahead extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { search: "" };
+
+        this.ChangeSearch = this.ChangeSearch.bind(this);
+    }
+
+    ChangeSearch(newValue) {
+        this.setState({ search: newValue });
+    }
+
     render() {
         return (
             <div>
-                <TypeaheadSearchBar />
-                {findMatches("fruit", fruits).map((fruit) => (
-                    <TypeaheadResult firstPart={fruit.firstPart} matchedPart={fruit.matchedPart} lastPart={fruit.lastPart} />
+                <TypeaheadSearchBar
+                    value={this.state.search}
+                    ChangeSearch={this.ChangeSearch} />
+
+                {findMatches(this.state.search, [...new Set(fruits)]).map((fruit) => (
+                    <TypeaheadResult key={fruit.firstPart + fruit.matchedPart + fruit.lastPart}
+                        firstPart={fruit.firstPart}
+                        matchedPart={fruit.matchedPart}
+                        lastPart={fruit.lastPart} />
                 ))}
 
             </div>
