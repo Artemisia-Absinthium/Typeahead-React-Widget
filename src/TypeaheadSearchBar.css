@@ -1,0 +1,32 @@
+.TypeaheadSearchBar{
+    width: 100%;
+}
+
+.TypeaheadSearchBar-Form {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #5921cf;
+    position: relative;
+}
+
+.TypeaheadSearchBar-Bar {
+    flex-grow: 100;
+    border: none;
+    font-size: large;
+}
+
+.TypeaheadSearchBar-Bar:focus {
+    outline: none;
+}
+
+.TypeaheadSearchBar-Button {
+    border: none;
+    background-color: transparent;
+    color: #5921cf;
+    cursor: pointer;
+    font-size: large;
+}
+
+.TypeaheadSearchBar-Button:focus {
+    outline: none;
+}

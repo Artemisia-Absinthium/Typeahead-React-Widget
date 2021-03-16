@@ -6,6 +6,25 @@ class TypeaheadResult extends Component {
         firstPart: "",
         matchedPart: "",
         lastPart: "",
+        isHoveredByKeyboard: false,
+        ChangeSearch: () => { },
+        ChangeDisplayedResult: () => { }
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.HandleClick = this.HandleClick.bind(this);
+    }
+
+    HandleClick(evt) {
+        var props = this.props;
+        var firstPart = props.firstPart;
+        var matchedPart = props.matchedPart;
+        var lastPart = props.lastPart;
+
+        this.props.ChangeSearch(firstPart + matchedPart + lastPart);
+        this.props.ChangeDisplayedResult();
     }
 
     render() {
@@ -13,10 +32,11 @@ class TypeaheadResult extends Component {
         var firstPart = props.firstPart;
         var matchedPart = props.matchedPart;
         var lastPart = props.lastPart;
+        var isHoveredByKeyboard = props.isHoveredByKeyboard;
 
         return (
-            <div>
-                <p>{firstPart}<span>{matchedPart}</span>{lastPart}</p>
+            <div className={`TypeaheadResult ${isHoveredByKeyboard ? "TypeaheadResultKeyboardHover" : ""}`} onMouseDown={this.HandleClick}>
+                <p className="TypeaheadResult-text">{firstPart}<span className="TypeaheadResult-MatchedPart">{matchedPart}</span>{lastPart}</p>
             </div>
         )
     };

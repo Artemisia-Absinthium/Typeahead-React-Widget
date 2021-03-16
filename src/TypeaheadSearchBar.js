@@ -2,36 +2,71 @@ import React, { Component } from 'react';
 import './TypeaheadSearchBar.css';
 
 class TypeaheadSearchBar extends Component {
+    static defaultProps = {
+        search: "",
+        ChangeSearch: () => { },
+        ChangeDisplayedResult: () => { },
+        SearchBarFocus: () => { },
+        SearchBarBlur: () => { },
+        SearchBarKeyboardEnter: () => { }
+    }
 
     constructor(props) {
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.HandleChange = this.HandleChange.bind(this);
+        this.HandleSubmit = this.HandleSubmit.bind(this);
+        this.HandleFocus = this.HandleFocus.bind(this);
+        this.HandleBlur = this.HandleBlur.bind(this);
+        this.HandleKeyDown = this.HandleKeyDown.bind(this);
     }
 
-    handleChange(evt) {
-        var newValue = evt.target.value;
-        this.props.ChangeSearch(newValue)
+    HandleChange(evt) {
+        this.props.ChangeSearch(evt.target.value);
     }
 
-    handleSubmit(evt) {
+    HandleSubmit(evt) {
         evt.preventDefault();
+        this.props.ChangeDisplayedResult();
+    }
+
+    HandleFocus(evt) {
+        this.props.SearchBarFocus();
+    }
+
+    HandleBlur(evt) {
+        this.props.SearchBarBlur();
+    }
+
+    HandleKeyDown(evt) {
+        if (evt.keyCode === 40 || evt.keyCode === 38) {
+            evt.preventDefault();
+        }
+
+        if (evt.keyCode === 13) {
+            this.props.SearchBarKeyboardEnter();
+            evt.preventDefault();
+        }
     }
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="SearchBar"> Search </label>
+            <div className="TypeaheadSearchBar">
+                <form className="TypeaheadSearchBar-Form"
+                    onSubmit={this.HandleSubmit}>
+                    <button className="TypeaheadSearchBar-Button"><i className="fas fa-search"></i></button>
                     <input
+                        className="TypeaheadSearchBar-Bar"
                         type="text"
                         name="SearchBar"
                         value={this.props.search}
                         placeholder={"Search a fruit"}
-                        onChange={this.handleChange}
+                        onChange={this.HandleChange}
+                        onFocus={this.HandleFocus}
+                        onBlur={this.HandleBlur}
+                        onKeyDown={this.HandleKeyDown}
+                        aria-label="Search"
                     />
-                    <button>Search</button>
                 </form>
             </div>
         )

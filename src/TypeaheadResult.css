@@ -1,0 +1,26 @@
+.TypeaheadResult {
+    height: 40px;
+    padding-left: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center
+}
+
+.TypeaheadResultKeyboardHover {
+    background-color: #fbf4ee;
+}
+
+.TypeaheadResult-text {
+    margin: 0;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.TypeaheadResult:hover {
+    background-color: #fbf4ee;
+    cursor: pointer;
+}
+
+.TypeaheadResult-MatchedPart {
+    color: #5921cf;
+}

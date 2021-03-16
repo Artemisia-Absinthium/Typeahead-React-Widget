@@ -1,4 +1,4 @@
-export function findMatches(substringToMatch, array) {
+export function FindMatches(substringToMatch, array) {
     var result = [];
 
     if (substringToMatch) {
@@ -20,3 +20,7 @@ export function findMatches(substringToMatch, array) {
 
     return result;
 };
+
+export function MergeResult(result) {
+    return result.firstPart + result.matchedPart + result.lastPart;
+}
