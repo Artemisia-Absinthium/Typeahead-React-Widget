@@ -14,9 +14,15 @@ You can try it out at: TODO
 
 In the project directory, you can run:
 
+`npm install`
+
+to install dependencies
+
+and then:
+
 `npm start`
 
-Runs the app in the development mode.\
+To run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
