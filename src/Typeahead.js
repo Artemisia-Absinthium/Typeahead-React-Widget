@@ -59,11 +59,11 @@ class Typeahead extends Component {
         var cursorPos = this.state.cursorPos;
         var searchResult = this.state.searchResult;
 
-        if (evt.keyCode === 38 && cursorPos > 0) {
+        if (evt.key === "ArrowUp" && cursorPos > 0) {
             this.setState(prevState => ({
                 cursorPos: prevState.cursorPos - 1
             }));
-        } else if (evt.keyCode === 40 && cursorPos < searchResult.length - 1) {
+        } else if (evt.key === "ArrowDown" && cursorPos < searchResult.length - 1) {
             this.setState(prevState => ({
                 cursorPos: prevState.cursorPos + 1
             }));
