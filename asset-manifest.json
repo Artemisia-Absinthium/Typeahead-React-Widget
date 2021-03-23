@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Typeahead-React-Widget/static/css/main.f67e99f1.chunk.css",
-    "main.js": "/Typeahead-React-Widget/static/js/main.39713a7b.chunk.js",
-    "main.js.map": "/Typeahead-React-Widget/static/js/main.39713a7b.chunk.js.map",
+    "main.js": "/Typeahead-React-Widget/static/js/main.d90474ab.chunk.js",
+    "main.js.map": "/Typeahead-React-Widget/static/js/main.d90474ab.chunk.js.map",
     "runtime-main.js": "/Typeahead-React-Widget/static/js/runtime-main.0ca1e06b.js",
     "runtime-main.js.map": "/Typeahead-React-Widget/static/js/runtime-main.0ca1e06b.js.map",
     "static/js/2.ca8b8641.chunk.js": "/Typeahead-React-Widget/static/js/2.ca8b8641.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.0ca1e06b.js",
     "static/js/2.ca8b8641.chunk.js",
     "static/css/main.f67e99f1.chunk.css",
-    "static/js/main.39713a7b.chunk.js"
+    "static/js/main.d90474ab.chunk.js"
   ]
 }
