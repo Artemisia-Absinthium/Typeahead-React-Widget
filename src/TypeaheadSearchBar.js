@@ -54,7 +54,7 @@ class TypeaheadSearchBar extends Component {
             <div className="TypeaheadSearchBar">
                 <form className="TypeaheadSearchBar-Form"
                     onSubmit={this.HandleSubmit}>
-                    <button className="TypeaheadSearchBar-Button"><i className="fas fa-search"></i></button>
+                    <button aria-label="Submit Form" className="TypeaheadSearchBar-Button"><i className="fas fa-search"></i></button>
                     <input
                         className="TypeaheadSearchBar-Bar"
                         type="text"

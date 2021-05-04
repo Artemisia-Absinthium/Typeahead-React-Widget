@@ -15,9 +15,6 @@
     font-size: large;
 }
 
-.TypeaheadSearchBar-Bar:focus {
-    outline: none;
-}
 
 .TypeaheadSearchBar-Button {
     border: none;
@@ -25,8 +22,4 @@
     color: #5921cf;
     cursor: pointer;
     font-size: large;
-}
-
-.TypeaheadSearchBar-Button:focus {
-    outline: none;
 }

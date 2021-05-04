@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Typeahead.css';
-import TypeaheadSearchBar from "./TypeaheadSearchBar"
-import TypeaheadResult from "./TypeaheadResult"
-import fruits from "./Fruits"
+import TypeaheadSearchBar from "./TypeaheadSearchBar";
+import TypeaheadResult from "./TypeaheadResult";
+import fruits from "./Fruits";
 import { FindMatches, MergeResult } from './Utils.js';
 
 class Typeahead extends Component {
@@ -20,8 +20,8 @@ class Typeahead extends Component {
         this.ChangeDisplayedResult = this.ChangeDisplayedResult.bind(this);
         this.SearchBarFocus = this.SearchBarFocus.bind(this);
         this.SearchBarBlur = this.SearchBarBlur.bind(this);
-        this.HandleKeyDown = this.HandleKeyDown.bind(this)
-        this.SearchBarKeyboardEnter = this.SearchBarKeyboardEnter.bind(this)
+        this.HandleKeyDown = this.HandleKeyDown.bind(this);
+        this.SearchBarKeyboardEnter = this.SearchBarKeyboardEnter.bind(this);
     }
 
     ChangeSearch(newValue) {
@@ -31,7 +31,7 @@ class Typeahead extends Component {
             searchResult: matches,
             cursorPos: -1,
             isFocused: true
-        }))
+        }));
     }
 
     ChangeDisplayedResult() {
